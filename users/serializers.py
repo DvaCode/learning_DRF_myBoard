@@ -6,7 +6,7 @@ from rest_framework.validators import UniqueValidator           #이메일 중�
 from django.contrib.auth import authenticate # Django의 기본 authenticate 함수, 설정한 DefaultAuthBackend인 TokenAuth 방식으로 유저를 인증해줌
 from .models import Profile
 
-class ProfileSerializer(serializers.Modelserializer):
+class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = ('nickname', 'position', 'subjects', 'image')

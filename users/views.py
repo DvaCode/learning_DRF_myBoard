@@ -4,7 +4,7 @@ from .serializers import RegisterSerializer, LoginSerializer, ProfileSerializer
 from .models import Profile
 from rest_framework.response import Response
 
-class ProfileView(generics.RetrieveUpdatedAPIView):
+class ProfileView(generics.RetrieveUpdateAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
 
